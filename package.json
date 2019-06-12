@@ -56,7 +56,7 @@
     ]
   },
   "main": "dist/index.js",
-  "name": "publisher",
+  "name": "@ffflorian/publisher",
   "prettier": "@ffflorian/prettier-config",
   "repository": "https://github.com/ffflorian/publisher.git",
   "scripts": {
