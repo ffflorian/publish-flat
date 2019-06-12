@@ -14,7 +14,7 @@ program
   .option('-c, --yarn', 'Use yarn for publishing (default: false)')
   .option('-f, --flatten <dir>', 'Which directory to flatten', 'dist')
   .option('-o, --output <dir>', 'Set the output directory (default: temp directory)')
-  .option('-n, --no-publish', 'Do not publish (default: false)')
+  .option('-p, --publish', 'Publish (default: false)')
   .arguments('[dir]')
   .allowUnknownOption()
   .parse(process.argv);
@@ -35,7 +35,6 @@ flatPublisher
     if (program.publish && outputDir) {
       return flatPublisher.publish(outputDir);
     }
-    console.log(outputDir);
     return;
   })
   .catch(error => {

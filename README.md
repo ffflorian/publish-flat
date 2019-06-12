@@ -1,14 +1,15 @@
 # publish-flat [![Build Status](https://action-badges.now.sh/ffflorian/publish-flat)](https://github.com/ffflorian/publish-flat/actions/) [![npm version](https://img.shields.io/npm/v/publish-flat.svg?style=flat)](https://www.npmjs.com/package/publish-flat) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/publish-flat)](https://dependabot.com)
 
-Publish your project flattened.
+Publish your project flattened. No more `require('dependency/dist/Options')`.
 
 ## Description
 
 Here is what it does:
 
-1. Re-build your project
-2. Copy your dist files into a temporary directory
-3. Publish your project from the temporary directory
+1. Re-builds your project
+2. Copies your dist files together with the other release files into a temporary directory
+3. Aligns your `package.json` to work with the flattened structure
+4. Publishes your project from the temporary directory (optional)
 
 ## Installation
 
@@ -28,7 +29,7 @@ Options:
   -c, --yarn           Use yarn for publishing (default: false)
   -f, --flatten <dir>  Which directory to flatten (default: "dist")
   -o, --output <dir>   Set the output directory (default: temp directory)
-  -n, --no-publish     Do not publish (default: false)
+  -p, --publish        Publish (default: false)
   -h, --help           output usage information
 ```
 

@@ -33,7 +33,7 @@ export class FlatPublisher {
 
   constructor(options: PublishOptions) {
     this.options = options;
-    this.logger = logdown('flat-publish', {
+    this.logger = logdown('publish-flat', {
       logger: console,
       markdown: false,
     });
@@ -54,7 +54,7 @@ export class FlatPublisher {
   }
 
   private createTempDir(): Promise<string> {
-    return fs.mkdtemp(path.join(os.tmpdir(), 'flat-publish-'));
+    return fs.mkdtemp(path.join(os.tmpdir(), 'publish-flat-'));
   }
 
   private async cleanPackageJson(filePath: string, filesInFlattenedDir: FilesInFlattenedDir): Promise<void> {
@@ -134,7 +134,7 @@ export class FlatPublisher {
       });
     }
 
-    this.logger.info(`Flattened ${filesInFlattenedDir.length} files`);
+    this.logger.info(`Flattened ${filesInFlattenedDir.length} files in "${outputDir}".`);
 
     await this.cleanPackageJson(path.join(outputDir, 'package.json'), filesInFlattenedDir);
 
