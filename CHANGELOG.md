@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/ffflorian/publish-flat/compare/v1.1.1...v1.1.2) (2019-06-12)
+
+### Bug Fixes
+
+- package.json path ([15f0558](https://github.com/ffflorian/publish-flat/commit/15f0558))
+
 ## [1.1.1](https://github.com/ffflorian/publish-flat/compare/v1.1.0...v1.1.1) (2019-06-12)
 
 ### Bug Fixes
