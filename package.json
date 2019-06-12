@@ -1,0 +1,79 @@
+{
+  "author": "Florian Keller <github@floriankeller.de>",
+  "bin": {
+    "publisher": "dist/cli.js"
+  },
+  "dependencies": {
+    "commander": "2.20.0",
+    "commander-remaining-args": "1.2.0",
+    "fs-extra": "8.0.1",
+    "logdown": "3.2.8",
+    "npm-packlist": "1.4.1"
+  },
+  "description": "Publish your project without the dist directory",
+  "devDependencies": {
+    "@ffflorian/prettier-config": "0.0.5",
+    "@ffflorian/tslint-config": "0.2.2",
+    "@semantic-release/changelog": "3.0.2",
+    "@semantic-release/git": "7.0.8",
+    "@types/fs-extra": "7.0.0",
+    "@types/jasmine": "3.3.13",
+    "@types/node": "~12",
+    "@types/npm-packlist": "1.1.1",
+    "husky": "2.4.1",
+    "jasmine": "3.4.0",
+    "lint-staged": "8.2.0",
+    "prettier": "1.18.2",
+    "rimraf": "2.6.3",
+    "semantic-release": "15.13.12",
+    "ts-node": "8.2.0",
+    "tslint": "5.17.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.0.1",
+    "typescript": "3.5.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "keywords": [
+    "cli",
+    "typescript"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts": [
+      "tslint --project tsconfig.json --fix",
+      "git add"
+    ]
+  },
+  "main": "dist/index.js",
+  "name": "publisher",
+  "prettier": "@ffflorian/prettier-config",
+  "repository": "https://github.com/ffflorian/publisher.git",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "dist": "yarn clean && yarn build",
+    "fix": "yarn fix:other && yarn fix:ts",
+    "fix:other": "yarn prettier --write",
+    "fix:ts": "yarn lint:ts --fix",
+    "lint": "yarn lint:ts && yarn lint:other",
+    "lint:other": "yarn prettier --list-different",
+    "lint:ts": "tslint --project tsconfig.json",
+    "prettier": "prettier \"*.{json,md}\"",
+    "publish": "node dist/cli.js",
+    "release": "semantic-release",
+    "start": "ts-node src/cli.ts",
+    "test": "exit 0"
+  },
+  "version": "0.0.1"
+}
