@@ -1,11 +1,18 @@
 #!/usr/bin/env node
 
 import * as program from 'commander';
+import * as fs from 'fs-extra';
+import * as path from 'path';
+
 import {FlatPublisher} from './FlatPublisher';
 
 const getRemainingArgs = require('commander-remaining-args');
+const defaultPackageJsonPath = path.join(__dirname, 'package.json');
+const packageJsonPath = fs.existsSync(defaultPackageJsonPath)
+  ? defaultPackageJsonPath
+  : path.join(__dirname, '../package.json');
 
-const {bin, description, version} = require('../package.json');
+const {bin, description, version} = fs.readJSONSync(packageJsonPath);
 
 program
   .name(Object.keys(bin)[0])
