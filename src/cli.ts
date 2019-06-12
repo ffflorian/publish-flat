@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import * as program from 'commander';
-import {Publisher} from './Publisher';
+import {FlatPublisher} from './FlatPublisher';
 
 const getRemainingArgs = require('commander-remaining-args');
 
@@ -12,7 +12,8 @@ program
   .version(version)
   .description(description)
   .option('-c, --yarn', 'Use yarn for publishing (default: false)')
-  .option('-o, --omit <dir>', 'Which directory to omit', 'dist')
+  .option('-f, --flatten <dir>', 'Which directory to flatten', 'dist')
+  .option('-o, --output <dir>', 'Set the output directory (default: temp directory)')
   .option('-n, --no-publish', 'Do not publish (default: false)')
   .arguments('[dir]')
   .allowUnknownOption()
@@ -20,20 +21,21 @@ program
 
 const remainingArgs = getRemainingArgs(program);
 
-const publisher = new Publisher({
-  dirToOmit: program.omit,
+const flatPublisher = new FlatPublisher({
+  dirToFlatten: program.flatten,
+  outputDir: program.output,
   packageDir: program.dir || '.',
   publishArguments: remainingArgs,
   useYarn: program.yarn || false,
 });
 
-publisher
+flatPublisher
   .build()
-  .then(tempDir => {
-    if (program.publish && tempDir) {
-      return publisher.publish(tempDir);
+  .then(outputDir => {
+    if (program.publish && outputDir) {
+      return flatPublisher.publish(outputDir);
     }
-    console.log(tempDir);
+    console.log(outputDir);
     return;
   })
   .catch(error => {

@@ -1,9 +1,10 @@
 {
   "author": "Florian Keller <github@floriankeller.de>",
   "bin": {
-    "publisher": "dist/cli.js"
+    "publish-flat": "dist/cli.js"
   },
   "dependencies": {
+    "@expo/spawn-async": "1.4.2",
     "commander": "2.20.0",
     "commander-remaining-args": "1.2.0",
     "fs-extra": "8.0.1",
@@ -16,6 +17,7 @@
     "@ffflorian/tslint-config": "0.2.2",
     "@semantic-release/changelog": "3.0.2",
     "@semantic-release/git": "7.0.8",
+    "@semantic-release/npm": "5.1.7",
     "@types/fs-extra": "7.0.0",
     "@types/jasmine": "3.3.13",
     "@types/node": "~12",
@@ -56,9 +58,9 @@
     ]
   },
   "main": "dist/index.js",
-  "name": "@ffflorian/publisher",
+  "name": "publish-flat",
   "prettier": "@ffflorian/prettier-config",
-  "repository": "https://github.com/ffflorian/publisher.git",
+  "repository": "https://github.com/ffflorian/publish-flat.git",
   "scripts": {
     "build": "tsc",
     "clean": "rimraf dist",
@@ -69,8 +71,8 @@
     "lint": "yarn lint:ts && yarn lint:other",
     "lint:other": "yarn prettier --list-different",
     "lint:ts": "tslint --project tsconfig.json",
+    "flatten": "yarn start -n -o flattened",
     "prettier": "prettier \"*.{json,md}\"",
-    "publish": "node dist/cli.js",
     "release": "semantic-release",
     "start": "ts-node src/cli.ts",
     "test": "exit 0"

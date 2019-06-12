@@ -1,6 +1,6 @@
-# publisher [![Build Status](https://action-badges.now.sh/ffflorian/publisher)](https://github.com/ffflorian/publisher/actions/) [![npm version](https://img.shields.io/npm/v/@ffflorian/publisher.svg?style=flat)](https://www.npmjs.com/package/@ffflorian/publisher) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/publisher)](https://dependabot.com)
+# publish-flat [![Build Status](https://action-badges.now.sh/ffflorian/publish-flat)](https://github.com/ffflorian/publish-flat/actions/) [![npm version](https://img.shields.io/npm/v/publish-flat.svg?style=flat)](https://www.npmjs.com/package/publish-flat) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/publish-flat)](https://dependabot.com)
 
-Publish your project without the dist directory.
+Publish your project flattened.
 
 ## Description
 
@@ -13,22 +13,23 @@ Here is what it does:
 ## Installation
 
 ```
-yarn add @ffflorian/publisher
+yarn add publish-flat
 ```
 
 ### CLI Usage
 
 ```
-Usage: cli.ts [options] <dir>
+Usage: publish-flat [options] [dir]
 
 Publish your project without the dist directory
 
 Options:
-  -V, --version     output the version number
-  -c, --yarn        Use yarn for publishing (default: false)
-  -o, --omit <dir>  Which directory to omit (default: "dist")
-  -n, --no-publish  Do not publish (default: false)
-  -h, --help        output usage information
+  -V, --version        output the version number
+  -c, --yarn           Use yarn for publishing (default: false)
+  -f, --flatten <dir>  Which directory to flatten (default: "dist")
+  -o, --output <dir>   Set the output directory (default: temp directory)
+  -n, --no-publish     Do not publish (default: false)
+  -h, --help           output usage information
 ```
 
 ### API Usage
