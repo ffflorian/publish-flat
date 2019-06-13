@@ -7,6 +7,7 @@ import * as path from 'path';
 import {FlatPublisher} from './FlatPublisher';
 
 const getRemainingArgs = require('commander-remaining-args');
+
 const defaultPackageJsonPath = path.join(__dirname, 'package.json');
 const packageJsonPath = fs.existsSync(defaultPackageJsonPath)
   ? defaultPackageJsonPath

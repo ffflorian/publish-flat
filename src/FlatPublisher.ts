@@ -134,7 +134,7 @@ export class FlatPublisher {
       });
     }
 
-    this.logger.info(`Flattened ${filesInFlattenedDir.length} files in "${outputDir}".`);
+    this.logger.info(`Flattened ${files.length} files in "${outputDir}".`);
 
     await this.cleanPackageJson(path.join(outputDir, 'package.json'), filesInFlattenedDir);
 
