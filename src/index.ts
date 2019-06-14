@@ -1,1 +1,1 @@
-export * from './FlatPublisher';
+export * from './PublishFlat';

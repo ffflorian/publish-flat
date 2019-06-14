@@ -24,7 +24,7 @@ interface Categorized {
   normalFiles: string[];
 }
 
-export class FlatPublisher {
+export class PublishFlat {
   private readonly options: PublishOptions;
   private readonly logger: logdown.Logger;
   private readonly packageDir: string;

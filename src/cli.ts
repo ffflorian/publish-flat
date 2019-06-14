@@ -4,7 +4,7 @@ import * as program from 'commander';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 
-import {FlatPublisher} from './FlatPublisher';
+import {PublishFlat} from './PublishFlat';
 
 const getRemainingArgs = require('commander-remaining-args');
 
@@ -29,7 +29,7 @@ program
 
 const remainingArgs = getRemainingArgs(program);
 
-const flatPublisher = new FlatPublisher({
+const flatPublisher = new PublishFlat({
   dirToFlatten: program.flatten,
   outputDir: program.output,
   packageDir: program.dir || '.',
