@@ -1,7 +1,8 @@
 {
   "author": "Florian Keller <github@floriankeller.de>",
   "bin": {
-    "publish-flat": "dist/cli.js"
+    "publish-flat": "dist/cli.js",
+    "publish-flat-copy": "dist/cli-copy.js"
   },
   "dependencies": {
     "@expo/spawn-async": "1.5.0",
@@ -19,6 +20,7 @@
     "@semantic-release/changelog": "3.0.4",
     "@semantic-release/git": "7.0.12",
     "@semantic-release/npm": "5.1.9",
+    "@types/commander-remaining-args": "1.2.0",
     "@types/fs-extra": "7.0.0",
     "@types/node": "~12",
     "@types/npm-packlist": "1.1.1",
@@ -75,9 +77,10 @@
     "lint:ts": "tslint --project tsconfig.json",
     "flatten": "yarn start -o flattened",
     "prettier": "prettier \"*.{json,md}\"",
+    "postversion": "ts-node src/cli-copy.ts version",
     "release": "semantic-release",
     "start": "ts-node src/cli.ts",
     "test": "exit 0"
   },
-  "version": "1.1.2"
+  "version": "1.1.3"
 }

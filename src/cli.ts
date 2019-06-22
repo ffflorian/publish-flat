@@ -1,12 +1,11 @@
 #!/usr/bin/env node
 
 import * as program from 'commander';
+import getRemainingArgs = require('commander-remaining-args');
 import * as fs from 'fs-extra';
 import * as path from 'path';
 
 import {PublishFlat} from './PublishFlat';
-
-const getRemainingArgs = require('commander-remaining-args');
 
 const defaultPackageJsonPath = path.join(__dirname, 'package.json');
 const packageJsonPath = fs.existsSync(defaultPackageJsonPath)

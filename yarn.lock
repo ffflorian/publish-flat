@@ -215,6 +215,14 @@
     into-stream "^4.0.0"
     lodash "^4.17.4"
 
+"@types/commander-remaining-args@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/@types/commander-remaining-args/-/commander-remaining-args-1.2.0.tgz#edb08eb4f4117b2a0b82f6ed9c1986ed52173d3f"
+  integrity sha512-Inmxq4BV5+rwm1QpgKpoCZyZXpHphRMaeiYSndTRy9KmpabrbRYWt+oBQfe79FZihPJoNLBTIMLgaJT60dCNoQ==
+  dependencies:
+    "@types/node" "*"
+    commander "^2.20.0"
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -930,7 +938,7 @@ commander-remaining-args@1.2.0:
   resolved "https://registry.yarnpkg.com/commander-remaining-args/-/commander-remaining-args-1.2.0.tgz#6fab4cce4a59db1698121f59105364adcb0b4c68"
   integrity sha512-yH0yRUtHhJ/389HWgQlEMAwqKXMZr/JJH4xqDIzXCisNy2mS6YSAe3WncgjxZvhLJqZPxJn8MivRK+B0lSNXPw==
 
-commander@2.20.0, commander@^2.12.1, commander@^2.14.1, commander@^2.9.0, commander@~2.20.0:
+commander@2.20.0, commander@^2.12.1, commander@^2.14.1, commander@^2.20.0, commander@^2.9.0, commander@~2.20.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
   integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
