@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/ffflorian/publish-flat/compare/v1.1.2...v1.1.3) (2019-06-22)
+
+### Bug Fixes
+
+- Imports ([08178f1](https://github.com/ffflorian/publish-flat/commit/08178f1))
+- Use @ffflorian/semantic-release-config ([239621e](https://github.com/ffflorian/publish-flat/commit/239621e))
+
 ## [1.1.2](https://github.com/ffflorian/publish-flat/compare/v1.1.1...v1.1.2) (2019-06-12)
 
 ### Bug Fixes
