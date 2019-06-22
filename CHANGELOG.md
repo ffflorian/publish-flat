@@ -1,3 +1,9 @@
+# [1.2.0](https://github.com/ffflorian/publish-flat/compare/v1.1.3...v1.2.0) (2019-06-22)
+
+### Features
+
+- Add publish-flat-copy ([f76704f](https://github.com/ffflorian/publish-flat/commit/f76704f))
+
 ## [1.1.3](https://github.com/ffflorian/publish-flat/compare/v1.1.2...v1.1.3) (2019-06-22)
 
 ### Bug Fixes
