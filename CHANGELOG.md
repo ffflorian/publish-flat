@@ -1,3 +1,9 @@
+## [1.2.3](https://github.com/ffflorian/publish-flat/compare/v1.2.2...v1.2.3) (2019-06-24)
+
+### Bug Fixes
+
+- Default files for copy ([827c474](https://github.com/ffflorian/publish-flat/commit/827c474))
+
 ## [1.2.2](https://github.com/ffflorian/publish-flat/compare/v1.2.1...v1.2.2) (2019-06-24)
 
 ### Bug Fixes
