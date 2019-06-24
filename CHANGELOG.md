@@ -1,3 +1,9 @@
+## [1.2.4](https://github.com/ffflorian/publish-flat/compare/v1.2.3...v1.2.4) (2019-06-24)
+
+### Bug Fixes
+
+- Postpublish script ([c214ff1](https://github.com/ffflorian/publish-flat/commit/c214ff1))
+
 ## [1.2.3](https://github.com/ffflorian/publish-flat/compare/v1.2.2...v1.2.3) (2019-06-24)
 
 ### Bug Fixes
