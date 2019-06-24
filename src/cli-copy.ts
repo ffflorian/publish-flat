@@ -17,9 +17,9 @@ const name = Object.keys(bin)[1];
 program
   .name(name)
   .version(version)
-  .description(`Copy entries from one JSON file to the other (example: ${name} version)`)
-  .option('-i, --input <file>', 'Set the input JSON file', './flattened/package.json')
-  .option('-o, --output <file>', 'Set the output JSON file', './package.json')
+  .description(`Copy entries from one JSON file to the other (example: "${name} version")`)
+  .option('-i, --input <file>', 'Set the input JSON file', './package.json')
+  .option('-o, --output <file>', 'Set the output JSON file', '../package.json')
   .parse(process.argv);
 
 const values = program.args;
