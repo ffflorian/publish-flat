@@ -19,7 +19,7 @@
     "@ffflorian/tslint-config": "0.3.1",
     "@semantic-release/changelog": "3.0.4",
     "@semantic-release/git": "7.0.13",
-    "@semantic-release/npm": "5.1.9",
+    "@semantic-release/npm": "5.1.12",
     "@types/commander-remaining-args": "1.2.0",
     "@types/fs-extra": "7.0.0",
     "@types/node": "~12",
