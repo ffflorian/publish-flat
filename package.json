@@ -21,7 +21,7 @@
     "@semantic-release/git": "7.0.14",
     "@semantic-release/npm": "5.1.13",
     "@types/commander-remaining-args": "1.2.0",
-    "@types/fs-extra": "7.0.0",
+    "@types/fs-extra": "8.0.0",
     "@types/node": "~12",
     "@types/npm-packlist": "1.1.1",
     "husky": "2.6.0",
