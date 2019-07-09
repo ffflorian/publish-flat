@@ -44,41 +44,6 @@ export class PublishFlat {
     this.dirToFlattenRegex = new RegExp(`${this.dirToFlatten}[\\/]`);
   }
 
-  private cleanDirName(dirName: string): string {
-    const separatorRegex = new RegExp('[\\/]*([^\\/]+)[\\/]*', 'g');
-    const cleanName = dirName.trim().replace(separatorRegex, '$1');
-    if (!cleanName) {
-      throw new Error(`Invalid flatten dir "${dirName}" specified`);
-    }
-    return cleanName;
-  }
-
-  private createTempDir(): Promise<string> {
-    return fs.mkdtemp(path.join(os.tmpdir(), 'publish-flat-'));
-  }
-
-  private async cleanPackageJson(filePath: string, filesInFlattenedDir: FilesInFlattenedDir): Promise<void> {
-    const packageJson = await fs.readJSON(filePath);
-    packageJson.files = packageJson.files.map((fileName: string) => fileName.replace(this.dirToFlattenRegex, ''));
-    packageJson.files = packageJson.files.concat(filesInFlattenedDir.map(({replacedFilename}) => replacedFilename));
-    packageJson.files = packageJson.files.filter((fileName: string) => fileName !== this.dirToFlatten);
-
-    if (typeof packageJson.bin === 'string') {
-      packageJson.bin = packageJson.bin.replace(this.dirToFlattenRegex, '');
-    } else if (typeof packageJson.bin === 'object') {
-      for (const binName of Object.keys(packageJson.bin)) {
-        packageJson.bin[binName] = packageJson.bin[binName].replace(this.dirToFlattenRegex, '');
-      }
-    }
-
-    if (packageJson.main) {
-      packageJson.main = packageJson.main.replace(this.dirToFlattenRegex, '');
-    }
-
-    const packageJsonString = `${JSON.stringify(packageJson, null, 2)}\n`;
-    await fs.writeFile(filePath, packageJsonString, 'utf-8');
-  }
-
   async publish(tempDir: string): Promise<void> {
     this.logger.info(`Publishing "${this.packageDir}" ...`);
 
@@ -139,5 +104,40 @@ export class PublishFlat {
     await this.cleanPackageJson(path.join(outputDir, 'package.json'), filesInFlattenedDir);
 
     return outputDir;
+  }
+
+  private cleanDirName(dirName: string): string {
+    const separatorRegex = new RegExp('[\\/]*([^\\/]+)[\\/]*', 'g');
+    const cleanName = dirName.trim().replace(separatorRegex, '$1');
+    if (!cleanName) {
+      throw new Error(`Invalid flatten dir "${dirName}" specified`);
+    }
+    return cleanName;
+  }
+
+  private createTempDir(): Promise<string> {
+    return fs.mkdtemp(path.join(os.tmpdir(), 'publish-flat-'));
+  }
+
+  private async cleanPackageJson(filePath: string, filesInFlattenedDir: FilesInFlattenedDir): Promise<void> {
+    const packageJson = await fs.readJSON(filePath);
+    packageJson.files = packageJson.files.map((fileName: string) => fileName.replace(this.dirToFlattenRegex, ''));
+    packageJson.files = packageJson.files.concat(filesInFlattenedDir.map(({replacedFilename}) => replacedFilename));
+    packageJson.files = packageJson.files.filter((fileName: string) => fileName !== this.dirToFlatten);
+
+    if (typeof packageJson.bin === 'string') {
+      packageJson.bin = packageJson.bin.replace(this.dirToFlattenRegex, '');
+    } else if (typeof packageJson.bin === 'object') {
+      for (const binName of Object.keys(packageJson.bin)) {
+        packageJson.bin[binName] = packageJson.bin[binName].replace(this.dirToFlattenRegex, '');
+      }
+    }
+
+    if (packageJson.main) {
+      packageJson.main = packageJson.main.replace(this.dirToFlattenRegex, '');
+    }
+
+    const packageJsonString = `${JSON.stringify(packageJson, null, 2)}\n`;
+    await fs.writeFile(filePath, packageJsonString, 'utf-8');
   }
 }
