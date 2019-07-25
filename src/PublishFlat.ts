@@ -128,7 +128,7 @@ export class PublishFlat {
     if (typeof packageJson.bin === 'string') {
       packageJson.bin = packageJson.bin.replace(this.dirToFlattenRegex, '');
     } else if (typeof packageJson.bin === 'object') {
-      for (const binName of Object.keys(packageJson.bin)) {
+      for (const binName in packageJson.bin) {
         packageJson.bin[binName] = packageJson.bin[binName].replace(this.dirToFlattenRegex, '');
       }
     }
