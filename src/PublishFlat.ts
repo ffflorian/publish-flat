@@ -25,11 +25,11 @@ interface Categorized {
 }
 
 export class PublishFlat {
-  private readonly options: PublishOptions;
-  private readonly logger: logdown.Logger;
-  private readonly packageDir: string;
   private readonly dirToFlatten: string;
   private readonly dirToFlattenRegex: RegExp;
+  private readonly logger: logdown.Logger;
+  private readonly options: PublishOptions;
+  private readonly packageDir: string;
 
   constructor(options: PublishOptions) {
     this.options = options;
@@ -42,23 +42,6 @@ export class PublishFlat {
     this.packageDir = path.resolve(this.options.packageDir);
     this.dirToFlatten = this.cleanDirName(this.options.dirToFlatten);
     this.dirToFlattenRegex = new RegExp(`${this.dirToFlatten}[\\/]`);
-  }
-
-  async publish(tempDir: string): Promise<void> {
-    this.logger.info(`Publishing "${this.packageDir}" ...`);
-
-    const executor = this.options.useYarn ? 'yarn' : 'npm';
-    const args = ['publish', `"${tempDir}"`].concat(this.options.publishArguments || []);
-
-    this.logger.info(`Running "${executor} ${args.join(' ')}" ...`);
-
-    const {stdout} = await spawnAsync(executor, args, {shell: true, windowsHide: true});
-
-    if (stdout) {
-      this.logger.info(stdout);
-    }
-
-    await fs.remove(tempDir);
   }
 
   async build(): Promise<string | void> {
@@ -106,6 +89,23 @@ export class PublishFlat {
     return outputDir;
   }
 
+  async publish(tempDir: string): Promise<void> {
+    this.logger.info(`Publishing "${this.packageDir}" ...`);
+
+    const executor = this.options.useYarn ? 'yarn' : 'npm';
+    const args = ['publish', `"${tempDir}"`].concat(this.options.publishArguments || []);
+
+    this.logger.info(`Running "${executor} ${args.join(' ')}" ...`);
+
+    const {stdout} = await spawnAsync(executor, args, {shell: true, windowsHide: true});
+
+    if (stdout) {
+      this.logger.info(stdout);
+    }
+
+    await fs.remove(tempDir);
+  }
+
   private cleanDirName(dirName: string): string {
     const separatorRegex = new RegExp('[\\/]*([^\\/]+)[\\/]*', 'g');
     const cleanName = dirName.trim().replace(separatorRegex, '$1');
@@ -113,10 +113,6 @@ export class PublishFlat {
       throw new Error(`Invalid flatten dir "${dirName}" specified`);
     }
     return cleanName;
-  }
-
-  private createTempDir(): Promise<string> {
-    return fs.mkdtemp(path.join(os.tmpdir(), 'publish-flat-'));
   }
 
   private async cleanPackageJson(filePath: string, filesInFlattenedDir: FilesInFlattenedDir): Promise<void> {
@@ -139,5 +135,9 @@ export class PublishFlat {
 
     const packageJsonString = `${JSON.stringify(packageJson, null, 2)}\n`;
     await fs.writeFile(filePath, packageJsonString, 'utf-8');
+  }
+
+  private createTempDir(): Promise<string> {
+    return fs.mkdtemp(path.join(os.tmpdir(), 'publish-flat-'));
   }
 }
