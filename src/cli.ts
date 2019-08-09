@@ -18,7 +18,7 @@ program
   .name(Object.keys(bin)[0])
   .version(version)
   .description(description)
-  .option('-c, --yarn', 'Use yarn for publishing (default: false)')
+  .option('-y, --yarn', 'Use yarn for publishing (default: false)')
   .option('-f, --flatten <dir>', 'Which directory to flatten', 'dist')
   .option('-o, --output <dir>', 'Set the output directory (default: temp directory)')
   .option('-p, --publish', 'Publish (default: false)')

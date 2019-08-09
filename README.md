@@ -71,7 +71,7 @@ Publish your project without the dist directory
 
 Options:
   -V, --version        output the version number
-  -c, --yarn           Use yarn for publishing (default: false)
+  -y, --yarn           Use yarn for publishing (default: false)
   -f, --flatten <dir>  Which directory to flatten (default: "dist")
   -o, --output <dir>   Set the output directory (default: temp directory)
   -p, --publish        Publish (default: false)
