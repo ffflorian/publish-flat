@@ -1,3 +1,9 @@
+# [1.3.0](https://github.com/ffflorian/publish-flat/compare/v1.2.4...v1.3.0) (2019-08-09)
+
+### Features
+
+- Use -y as alias for --yarn ([a054cb0](https://github.com/ffflorian/publish-flat/commit/a054cb0))
+
 ## [1.2.4](https://github.com/ffflorian/publish-flat/compare/v1.2.3...v1.2.4) (2019-06-24)
 
 ### Bug Fixes
