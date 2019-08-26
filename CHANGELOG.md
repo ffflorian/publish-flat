@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/ffflorian/publish-flat/compare/v1.3.0...v1.3.1) (2019-08-26)
+
+### Bug Fixes
+
+- Sort files in flattened package.json ([cf61552](https://github.com/ffflorian/publish-flat/commit/cf61552))
+
 # [1.3.0](https://github.com/ffflorian/publish-flat/compare/v1.2.4...v1.3.0) (2019-08-09)
 
 ### Features
