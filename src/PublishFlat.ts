@@ -56,7 +56,7 @@ export class PublishFlat {
       throw new Error(`Files don't include a "package.json" file`);
     }
 
-    const {normalFiles, filesInFlattenedDir: filesInFlattenedDir} = files.reduce(
+    const {normalFiles, filesInFlattenedDir} = files.reduce(
       (result: Categorized, fileName: string) => {
         if (this.dirToFlattenRegex.test(fileName)) {
           const replacedFilename = fileName.replace(this.dirToFlattenRegex, '');
@@ -118,8 +118,10 @@ export class PublishFlat {
   private async cleanPackageJson(filePath: string, filesInFlattenedDir: FilesInFlattenedDir): Promise<void> {
     const packageJson = await fs.readJSON(filePath);
     packageJson.files = packageJson.files.map((fileName: string) => fileName.replace(this.dirToFlattenRegex, ''));
-    packageJson.files = packageJson.files.concat(filesInFlattenedDir.map(({replacedFilename}) => replacedFilename));
-    packageJson.files = packageJson.files.filter((fileName: string) => fileName !== this.dirToFlatten);
+    packageJson.files = packageJson.files
+      .concat(filesInFlattenedDir.map(({replacedFilename}) => replacedFilename))
+      .filter((fileName: string) => fileName !== this.dirToFlatten)
+      .sort();
 
     if (typeof packageJson.bin === 'string') {
       packageJson.bin = packageJson.bin.replace(this.dirToFlattenRegex, '');
