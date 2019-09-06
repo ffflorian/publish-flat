@@ -76,7 +76,7 @@
     "lint:ts": "tslint --project tsconfig.json",
     "flatten": "yarn start -o flattened",
     "prettier": "prettier \"*.{json,md}\"",
-    "postpublish": "node ../dist/cli-copy.js version",
+    "postversion": "node ../dist/cli-copy.js version",
     "release": "semantic-release",
     "start": "ts-node src/cli.ts",
     "test": "exit 0"
