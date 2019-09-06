@@ -1,3 +1,9 @@
+## [1.3.2](https://github.com/ffflorian/publish-flat/compare/v1.3.1...v1.3.2) (2019-09-06)
+
+### Bug Fixes
+
+- Use postversion when publishing ([03e34b4](https://github.com/ffflorian/publish-flat/commit/03e34b4))
+
 ## [1.3.1](https://github.com/ffflorian/publish-flat/compare/v1.3.0...v1.3.1) (2019-08-26)
 
 ### Bug Fixes
