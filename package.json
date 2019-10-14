@@ -23,7 +23,7 @@
     "@types/fs-extra": "8.0.0",
     "@types/node": "~12",
     "@types/npm-packlist": "1.1.1",
-    "husky": "3.0.8",
+    "husky": "3.0.9",
     "lint-staged": "9.4.2",
     "prettier": "1.18.2",
     "rimraf": "3.0.0",
