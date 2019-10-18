@@ -1,4 +1,5 @@
 import spawnAsync from '@expo/spawn-async';
+import PackageJson from '@schemastore/package';
 import fs from 'fs-extra';
 import logdown from 'logdown';
 import packlist from 'npm-packlist';
@@ -115,12 +116,15 @@ export class PublishFlat {
   }
 
   private async cleanPackageJson(filePath: string, filesInFlattenedDir: FilesInFlattenedDir): Promise<void> {
-    const packageJson = await fs.readJSON(filePath);
-    packageJson.files = packageJson.files.map((fileName: string) => fileName.replace(this.dirToFlattenRegex, ''));
-    packageJson.files = packageJson.files
-      .concat(filesInFlattenedDir.map(({replacedFilename}) => replacedFilename))
-      .filter((fileName: string) => fileName !== this.dirToFlatten)
-      .sort();
+    const packageJson: PackageJson.CoreProperties = await fs.readJSON(filePath);
+
+    if (packageJson.files) {
+      packageJson.files = packageJson.files
+        .map(fileName => fileName.replace(this.dirToFlattenRegex, ''))
+        .concat(filesInFlattenedDir.map(({replacedFilename}) => replacedFilename))
+        .filter(fileName => fileName !== this.dirToFlatten)
+        .sort();
+    }
 
     if (typeof packageJson.bin === 'string') {
       packageJson.bin = packageJson.bin.replace(this.dirToFlattenRegex, '');
