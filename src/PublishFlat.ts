@@ -117,11 +117,14 @@ export class PublishFlat {
 
   private async cleanPackageJson(filePath: string, filesInFlattenedDir: FilesInFlattenedDir): Promise<void> {
     const packageJson = await fs.readJSON(filePath);
-    packageJson.files = packageJson.files.map((fileName: string) => fileName.replace(this.dirToFlattenRegex, ''));
-    packageJson.files = packageJson.files
-      .concat(filesInFlattenedDir.map(({replacedFilename}) => replacedFilename))
-      .filter((fileName: string) => fileName !== this.dirToFlatten)
-      .sort();
+    
+    if (packageJson.files) {
+      packageJson.files = packageJson.files
+        .map((fileName: string) => fileName.replace(this.dirToFlattenRegex, ''))
+        .concat(filesInFlattenedDir.map(({replacedFilename}) => replacedFilename))
+        .filter((fileName: string) => fileName !== this.dirToFlatten)
+        .sort();
+    }
 
     if (typeof packageJson.bin === 'string') {
       packageJson.bin = packageJson.bin.replace(this.dirToFlattenRegex, '');
