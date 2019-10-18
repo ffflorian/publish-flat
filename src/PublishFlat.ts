@@ -118,7 +118,7 @@ export class PublishFlat {
   private async cleanPackageJson(filePath: string, filesInFlattenedDir: FilesInFlattenedDir): Promise<void> {
     const packageJson: PackageJson = await fs.readJSON(filePath);
 
-    if (packageJson.files) {
+    if (Array.isArray(packageJson.files)) {
       packageJson.files = packageJson.files
         .map(fileName => fileName.replace(this.dirToFlattenRegex, ''))
         .concat(filesInFlattenedDir.map(({replacedFilename}) => replacedFilename))
