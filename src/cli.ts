@@ -2,8 +2,8 @@
 
 import program from 'commander';
 import getRemainingArgs from 'commander-remaining-args';
-import * as fs from 'fs-extra';
-import * as path from 'path';
+import fs from 'fs-extra';
+import path from 'path';
 
 import {PublishFlat} from './PublishFlat';
 
