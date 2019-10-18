@@ -1,3 +1,9 @@
+## [1.3.4](https://github.com/ffflorian/publish-flat/compare/v1.3.3...v1.3.4) (2019-10-18)
+
+### Bug Fixes
+
+- Check if `files` exists in package.json ([#96](https://github.com/ffflorian/publish-flat/issues/96)) ([5ea9ef2](https://github.com/ffflorian/publish-flat/commit/5ea9ef2))
+
 ## [1.3.3](https://github.com/ffflorian/publish-flat/compare/v1.3.2...v1.3.3) (2019-10-18)
 
 ### Bug Fixes
