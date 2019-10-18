@@ -118,6 +118,11 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@schemastore/package@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/@schemastore/package/-/package-0.0.5.tgz#67b621d5c833ad2d5a29a1acf868717b7839bb8a"
+  integrity sha512-0XEiMT/Rh8I0SEIO81fo5MN3AHhONFv9SJ1IIJ5OTI3PN/jG032OPlHUMxvrun7yc6YUGtufVg2WPQVK8PaH5Q==
+
 "@semantic-release/changelog@3.0.4":
   version "3.0.4"
   resolved "https://registry.npmjs.org/@semantic-release/changelog/-/changelog-3.0.4.tgz#8fc578b76bca5b23c3000694277c38e0fa835edd"
