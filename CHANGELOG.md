@@ -1,3 +1,9 @@
+## [1.3.3](https://github.com/ffflorian/publish-flat/compare/v1.3.2...v1.3.3) (2019-10-18)
+
+### Bug Fixes
+
+- Default imports ([#95](https://github.com/ffflorian/publish-flat/issues/95)) ([04e532b](https://github.com/ffflorian/publish-flat/commit/04e532b))
+
 ## [1.3.2](https://github.com/ffflorian/publish-flat/compare/v1.3.1...v1.3.2) (2019-09-06)
 
 ### Bug Fixes
