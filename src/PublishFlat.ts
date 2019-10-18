@@ -1,5 +1,5 @@
 import spawnAsync from '@expo/spawn-async';
-import PackageJson from '@schemastore/package';
+import {CoreProperties as PackageJson} from '@schemastore/package';
 import fs from 'fs-extra';
 import logdown from 'logdown';
 import packlist from 'npm-packlist';
@@ -116,7 +116,7 @@ export class PublishFlat {
   }
 
   private async cleanPackageJson(filePath: string, filesInFlattenedDir: FilesInFlattenedDir): Promise<void> {
-    const packageJson: PackageJson.CoreProperties = await fs.readJSON(filePath);
+    const packageJson: PackageJson = await fs.readJSON(filePath);
 
     if (packageJson.files) {
       packageJson.files = packageJson.files
