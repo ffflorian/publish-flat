@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import * as program from 'commander';
-import getRemainingArgs = require('commander-remaining-args');
+import program from 'commander';
+import getRemainingArgs from 'commander-remaining-args';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 

@@ -3,8 +3,8 @@ import * as path from 'path';
 
 import spawnAsync from '@expo/spawn-async';
 import * as fs from 'fs-extra';
-import * as logdown from 'logdown';
-import * as packlist from 'npm-packlist';
+import logdown from 'logdown';
+import packlist from 'npm-packlist';
 
 export interface PublishOptions {
   /** Which directory to flatten (e.g. to move dist/main.js => main.js, use `dist`) */
