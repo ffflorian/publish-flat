@@ -6,10 +6,9 @@ Publish your project flattened. No more `dist` in `require('project/dist/Options
 
 Here is what it does:
 
-1. Re-builds your project
-2. Copies your dist files together with the other release files into a temporary directory
-3. Aligns your `package.json` to work with the flattened structure
-4. Publishes your project from the temporary directory (optional)
+1. Copies your dist files together with the other release files into a temporary directory
+2. Aligns your `package.json` to work with the flattened structure
+3. Publishes your project from the temporary directory (optional)
 
 ### Example
 
