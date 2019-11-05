@@ -7,7 +7,7 @@
   "dependencies": {
     "@expo/spawn-async": "1.5.0",
     "@schemastore/package": "0.0.5",
-    "commander": "3.0.2",
+    "commander": "4.0.0",
     "commander-remaining-args": "1.2.0",
     "fs-extra": "8.1.0",
     "logdown": "3.2.8",
