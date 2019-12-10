@@ -3135,6 +3135,11 @@ npm-logical-tree@^1.2.1:
   resolved "https://registry.npmjs.org/npm-logical-tree/-/npm-logical-tree-1.2.1.tgz#44610141ca24664cad35d1e607176193fd8f5b88"
   integrity sha512-AJI/qxDB2PWI4LG1CYN579AY1vCiNyWfkiquCsJWqntRu/WwimVrC8yXeILBFHDwxfOejxewlmnvW9XXjMlYIg==
 
+npm-normalize-package-bin@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/npm-normalize-package-bin/-/npm-normalize-package-bin-1.0.1.tgz#6e79a41f23fd235c0623218228da7d9c23b8f6e2"
+  integrity sha512-EPfafl6JL5/rU+ot6P3gRSCpPDW5VmIzX959Ob1+ySFUuuYHWHekXpwdUZcKP5C+DS4GEtdJluwBjnsNDl+fSA==
+
 "npm-package-arg@^4.0.0 || ^5.0.0 || ^6.0.0", npm-package-arg@^6.0.0, npm-package-arg@^6.1.0, npm-package-arg@^6.1.1:
   version "6.1.1"
   resolved "https://registry.npmjs.org/npm-package-arg/-/npm-package-arg-6.1.1.tgz#02168cb0a49a2b75bf988a28698de7b529df5cb7"
@@ -3145,14 +3150,15 @@ npm-logical-tree@^1.2.1:
     semver "^5.6.0"
     validate-npm-package-name "^3.0.0"
 
-npm-packlist@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/npm-packlist/-/npm-packlist-2.0.1.tgz#891ae4dc81d8cd8ddeb9070d6338623cd5a20fce"
-  integrity sha512-UKSBjMX3wMcJpmW1JuN1BSVRGetjsA7SZrGwz12EM7AVwLSC6y5pI9xEK54m555Wp8L0CtJ3tab7D7Ex/AKBlg==
+npm-packlist@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/npm-packlist/-/npm-packlist-2.0.2.tgz#9e5e5d61f205771b4dfc1695e65a3ad0f2a2088b"
+  integrity sha512-i2l7hw7+B/Lq8rLDQLgTkL6pGVtts45S40l9vvvNPx8EiMunPKvst/RX17nk+waawoVYxu79IIIxe/W/thRnrg==
   dependencies:
     glob "^7.1.6"
     ignore-walk "^3.0.3"
     npm-bundled "^1.0.1"
+    npm-normalize-package-bin "^1.0.1"
 
 npm-packlist@^1.1.12, npm-packlist@^1.4.4:
   version "1.4.6"
