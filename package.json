@@ -10,7 +10,7 @@
     "commander": "4.0.1",
     "commander-remaining-args": "1.2.0",
     "fs-extra": "8.1.0",
-    "logdown": "3.2.8",
+    "logdown": "3.3.0",
     "npm-packlist": "2.0.2"
   },
   "description": "Publish your project without the dist directory",
