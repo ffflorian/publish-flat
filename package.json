@@ -22,7 +22,7 @@
     "@semantic-release/git": "7.0.18",
     "@types/commander-remaining-args": "1.2.1",
     "@types/fs-extra": "8.0.1",
-    "@types/node": "~12",
+    "@types/node": "~13",
     "@types/npm-packlist": "1.1.1",
     "husky": "3.1.0",
     "lint-staged": "9.5.0",
