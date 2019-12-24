@@ -234,13 +234,13 @@
   resolved "https://registry.npmjs.org/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
-"@types/commander-remaining-args@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/@types/commander-remaining-args/-/commander-remaining-args-1.2.0.tgz#edb08eb4f4117b2a0b82f6ed9c1986ed52173d3f"
-  integrity sha512-Inmxq4BV5+rwm1QpgKpoCZyZXpHphRMaeiYSndTRy9KmpabrbRYWt+oBQfe79FZihPJoNLBTIMLgaJT60dCNoQ==
+"@types/commander-remaining-args@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@types/commander-remaining-args/-/commander-remaining-args-1.2.1.tgz#7847b9ca5330c344a5361507a53562e11ebe94fe"
+  integrity sha512-3gQfZEhuO8hh4GIqwNzy9ai729gKdOKpUFA49ZLTnUYoZWnUDbnkxwhIBav+KG2w4k8q0aSVlHUamJfnMsOlnQ==
   dependencies:
     "@types/node" "*"
-    commander "^2.20.0"
+    commander "^4.0.1"
 
 "@types/events@*":
   version "3.0.0"
@@ -875,7 +875,7 @@ commander-remaining-args@1.2.0:
   resolved "https://registry.npmjs.org/commander-remaining-args/-/commander-remaining-args-1.2.0.tgz#6fab4cce4a59db1698121f59105364adcb0b4c68"
   integrity sha512-yH0yRUtHhJ/389HWgQlEMAwqKXMZr/JJH4xqDIzXCisNy2mS6YSAe3WncgjxZvhLJqZPxJn8MivRK+B0lSNXPw==
 
-commander@4.0.1:
+commander@4.0.1, commander@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/commander/-/commander-4.0.1.tgz#b67622721785993182e807f4883633e6401ba53c"
   integrity sha512-IPF4ouhCP+qdlcmCedhxX4xiGBPyigb8v5NeUp+0LyhwLgxMqyp3S0vl7TAPfS/hiP7FC3caI/PB9lTmP8r1NA==
