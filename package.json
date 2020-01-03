@@ -17,7 +17,7 @@
   "devDependencies": {
     "@ffflorian/prettier-config": "0.0.5",
     "@ffflorian/semantic-release-config": "0.1.4",
-    "@ffflorian/tslint-config": "0.7.0",
+    "@ffflorian/tslint-config": "0.7.1",
     "@semantic-release/changelog": "3.0.6",
     "@semantic-release/git": "7.0.18",
     "@types/commander-remaining-args": "1.2.1",
