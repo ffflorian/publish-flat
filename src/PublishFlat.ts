@@ -1,10 +1,15 @@
-import spawnAsync from '@expo/spawn-async';
-import {CoreProperties as PackageJson} from '@schemastore/package';
+import {execSync} from 'child_process';
 import fs from 'fs-extra';
 import logdown from 'logdown';
 import packlist from 'npm-packlist';
 import os from 'os';
 import path from 'path';
+
+interface PackageJson {
+  bin: Record<string, string> | string;
+  files: string[];
+  main?: string;
+}
 
 export interface PublishOptions {
   /** Which directory to flatten (e.g. to move dist/main.js => main.js, use `dist`) */
@@ -95,9 +100,13 @@ export class PublishFlat {
     const executor = this.options.useYarn ? 'yarn' : 'npm';
     const args = ['publish', `"${tempDir}"`].concat(this.options.publishArguments || []);
 
-    this.logger.info(`Running "${executor} ${args.join(' ')}" ...`);
+    const command = `${executor} ${args.join(' ')}`;
 
-    const {stdout} = await spawnAsync(executor, args, {shell: true, windowsHide: true});
+    this.logger.info(`Running "${command}" ...`);
+
+    const stdout = execSync(command)
+      .toString()
+      .trim();
 
     if (stdout) {
       this.logger.info(stdout);
