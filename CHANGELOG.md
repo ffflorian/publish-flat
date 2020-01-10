@@ -1,3 +1,9 @@
+# [1.4.0](https://github.com/ffflorian/publish-flat/compare/v1.3.4...v1.4.0) (2020-01-10)
+
+### Features
+
+- Reduce dependencies ([6eb1b26](https://github.com/ffflorian/publish-flat/commit/6eb1b26))
+
 ## [1.3.4](https://github.com/ffflorian/publish-flat/compare/v1.3.3...v1.3.4) (2019-10-18)
 
 ### Bug Fixes
