@@ -23,7 +23,7 @@
     "@types/node": "~12",
     "@types/npm-packlist": "1.1.1",
     "husky": "4.0.10",
-    "lint-staged": "9.5.0",
+    "lint-staged": "10.0.0",
     "prettier": "1.19.1",
     "rimraf": "3.0.0",
     "semantic-release": "16.0.2",
