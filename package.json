@@ -5,7 +5,7 @@
     "publish-flat-copy": "dist/cli-copy.js"
   },
   "dependencies": {
-    "commander": "4.1.0",
+    "commander": "4.1.1",
     "commander-remaining-args": "1.2.0",
     "fs-extra": "8.1.0",
     "logdown": "3.3.0",
