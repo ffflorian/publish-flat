@@ -26,7 +26,7 @@ program
   .allowUnknownOption()
   .parse(process.argv);
 
-const remainingArgs = getRemainingArgs(program);
+const remainingArgs = getRemainingArgs(program as any);
 
 const flatPublisher = new PublishFlat({
   dirToFlatten: program.flatten,
