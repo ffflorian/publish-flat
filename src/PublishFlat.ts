@@ -104,9 +104,7 @@ export class PublishFlat {
 
     this.logger.info(`Running "${command}" ...`);
 
-    const stdout = execSync(command)
-      .toString()
-      .trim();
+    const stdout = execSync(command).toString().trim();
 
     if (stdout) {
       this.logger.info(stdout);
