@@ -30,7 +30,7 @@ export async function copyJson(inputFile: string, outputFile: string, values: st
   let spaces = 2;
 
   if (!newJSONRaw) {
-    console.log('no content');
+    console.info('New JSON file has no content.');
     newJSONRaw = '{}';
   } else if (/^\{/.test(newJSONRaw)) {
     const spacesMatch = newJSONRaw.match(/^\{[\n\r]?( *)/);

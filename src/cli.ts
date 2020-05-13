@@ -42,8 +42,9 @@ flatPublisher
     if (program.publish && outputDir) {
       return flatPublisher.publish(outputDir);
     }
-    return;
+    return undefined;
   })
+  .then(() => process.exit())
   .catch(error => {
     console.error(error);
     process.exit(1);

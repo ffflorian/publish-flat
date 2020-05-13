@@ -22,7 +22,7 @@ export interface PublishOptions {
   useYarn?: boolean;
 }
 
-type FilesInFlattenedDir = Array<{fileName: string; replacedFilename: string}>;
+type FilesInFlattenedDir = {fileName: string; replacedFilename: string}[];
 
 interface Categorized {
   filesInFlattenedDir: FilesInFlattenedDir;
@@ -71,7 +71,7 @@ export class PublishFlat {
         }
         return result;
       },
-      {normalFiles: [], filesInFlattenedDir: []}
+      {filesInFlattenedDir: [], normalFiles: []}
     );
 
     const outputDir = this.options.outputDir ? path.resolve(this.options.outputDir) : await this.createTempDir();
