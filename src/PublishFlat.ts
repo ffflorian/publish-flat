@@ -22,7 +22,7 @@ export interface PublishOptions {
   useYarn?: boolean;
 }
 
-type FilesInFlattenedDir = {fileName: string; replacedFilename: string}[];
+type FilesInFlattenedDir = Array<{fileName: string; replacedFilename: string}>;
 
 interface Categorized {
   filesInFlattenedDir: FilesInFlattenedDir;
