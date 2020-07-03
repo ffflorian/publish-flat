@@ -6,7 +6,6 @@
   },
   "dependencies": {
     "commander": "5.1.0",
-    "commander-remaining-args": "1.2.0",
     "fs-extra": "9.0.1",
     "logdown": "3.3.1",
     "npm-packlist": "2.1.2"
@@ -18,7 +17,6 @@
     "@ffflorian/semantic-release-config": "0.2.1",
     "@semantic-release/changelog": "5.0.1",
     "@semantic-release/git": "9.0.0",
-    "@types/commander-remaining-args": "1.2.1",
     "@types/fs-extra": "9.0.1",
     "@types/node": "~14",
     "@types/npm-packlist": "1.1.1",

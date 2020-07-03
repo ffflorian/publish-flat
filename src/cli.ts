@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import program from 'commander';
-import getRemainingArgs from 'commander-remaining-args';
 import fs from 'fs-extra';
 import path from 'path';
 
@@ -26,13 +25,11 @@ program
   .allowUnknownOption()
   .parse(process.argv);
 
-const remainingArgs = getRemainingArgs(program as any);
-
 const flatPublisher = new PublishFlat({
   dirToFlatten: program.flatten,
   outputDir: program.output,
   packageDir: program.dir || '.',
-  publishArguments: remainingArgs,
+  publishArguments: program.args,
   useYarn: program.yarn || false,
 });
 
