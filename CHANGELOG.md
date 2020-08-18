@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/ffflorian/publish-flat/compare/v1.4.0...v1.4.1) (2020-08-18)
+
+
+### Bug Fixes
+
+* Remove commander-remaining-args ([46ae086](https://github.com/ffflorian/publish-flat/commit/46ae086cb13366580dd2928ebb2ca1ea2200853c))
+
 # [1.4.0](https://github.com/ffflorian/publish-flat/compare/v1.3.4...v1.4.0) (2020-01-10)
 
 ### Features
