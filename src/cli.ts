@@ -33,16 +33,15 @@ const flatPublisher = new PublishFlat({
   useYarn: program.yarn || false,
 });
 
-flatPublisher
-  .build()
-  .then(outputDir => {
+void (async () => {
+  try {
+    const outputDir = await flatPublisher.build();
     if (program.publish && outputDir) {
-      return flatPublisher.publish(outputDir);
+      await flatPublisher.publish(outputDir);
     }
-    return undefined;
-  })
-  .then(() => process.exit())
-  .catch(error => {
+    process.exit();
+  } catch (error) {
     console.error(error);
     process.exit(1);
-  });
+  }
+})();
