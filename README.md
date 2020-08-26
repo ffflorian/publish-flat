@@ -1,4 +1,4 @@
-# publish-flat [![Build Status](https://github.com/ffflorian/publish-flat/workflows/Build/badge.svg)](https://github.com/ffflorian/publish-flat/actions/) [![npm version](https://img.shields.io/npm/v/publish-flat.svg?style=flat)](https://www.npmjs.com/package/publish-flat) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/publish-flat)](https://dependabot.com)
+# publish-flat [![Build Status](https://github.com/ffflorian/publish-flat/workflows/Build/badge.svg)](https://github.com/ffflorian/publish-flat/actions/) [![npm version](https://img.shields.io/npm/v/publish-flat.svg?style=flat)](https://www.npmjs.com/package/publish-flat)
 
 Publish your project flattened. No more `dist` in `require('project/dist/Options')`.
 
