@@ -5,7 +5,7 @@
     "publish-flat-copy": "dist/cli-copy.js"
   },
   "dependencies": {
-    "commander": "6.0.0",
+    "commander": "6.1.0",
     "fs-extra": "9.0.1",
     "logdown": "3.3.1",
     "npm-packlist": "2.1.2"
