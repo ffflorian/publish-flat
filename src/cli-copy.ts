@@ -23,13 +23,14 @@ program
   .parse(process.argv);
 
 const values = program.args;
+const commanderOptions = program.opts();
 
 if (!values.length) {
   console.error('No values to copy');
   program.help();
 }
 
-copyJson(program.input, program.output, values).catch(error => {
+copyJson(commanderOptions.input, commanderOptions.output, values).catch(error => {
   console.error(error);
   process.exit(1);
 });
