@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import program from 'commander';
+import commander from 'commander';
 import fs from 'fs-extra';
 import path from 'path';
 
@@ -13,7 +13,7 @@ const packageJsonPath = fs.existsSync(defaultPackageJsonPath)
 
 const {bin, description, version} = fs.readJSONSync(packageJsonPath);
 
-program
+commander
   .name(Object.keys(bin)[0])
   .version(version)
   .description(description)
@@ -25,18 +25,20 @@ program
   .allowUnknownOption()
   .parse(process.argv);
 
+const commanderOptions = commander.opts();
+
 const flatPublisher = new PublishFlat({
-  dirToFlatten: program.flatten,
-  outputDir: program.output,
-  packageDir: program.dir || '.',
-  publishArguments: program.args,
-  useYarn: program.yarn || false,
+  dirToFlatten: commanderOptions.flatten,
+  outputDir: commanderOptions.output,
+  packageDir: commanderOptions.dir || '.',
+  publishArguments: commanderOptions.args,
+  useYarn: commanderOptions.yarn || false,
 });
 
 void (async () => {
   try {
     const outputDir = await flatPublisher.build();
-    if (program.publish && outputDir) {
+    if (commanderOptions.publish && outputDir) {
       await flatPublisher.publish(outputDir);
     }
     process.exit();
