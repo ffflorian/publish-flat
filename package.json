@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "commander": "7.0.0",
-    "fs-extra": "9.0.1",
+    "fs-extra": "9.1.0",
     "logdown": "3.3.1",
     "npm-packlist": "2.1.4"
   },
