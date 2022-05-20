@@ -8,7 +8,7 @@
     "commander": "9.2.0",
     "fs-extra": "10.1.0",
     "logdown": "3.3.1",
-    "npm-packlist": "5.0.3"
+    "npm-packlist": "5.0.4"
   },
   "description": "Publish your project without the dist directory",
   "devDependencies": {
