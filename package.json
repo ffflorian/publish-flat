@@ -67,7 +67,7 @@
     "lint:other": "yarn prettier --list-different",
     "lint:ts": "eslint --ignore-path .gitignore --ext .ts src/",
     "flatten": "yarn start -o flattened",
-    "prettier": "prettier \"*.{json,md}\"",
+    "prettier": "prettier \"*.{json,md,yml}\"",
     "postversion": "node ../dist/cli-copy.js version",
     "release": "semantic-release",
     "start": "ts-node src/cli.ts",
