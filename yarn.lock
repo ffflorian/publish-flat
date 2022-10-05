@@ -218,7 +218,7 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@npmcli/arborist@^5.0.0", "@npmcli/arborist@^5.0.4", "@npmcli/arborist@^5.0.4 || ^6.0.0 || ^6.0.0-pre.0":
+"@npmcli/arborist@^5.0.0", "@npmcli/arborist@^5.0.4":
   version "5.6.2"
   resolved "https://registry.npmjs.org/@npmcli/arborist/-/arborist-5.6.2.tgz#552b554f34777e5dcc8e68ad86cdaeebc0788790"
   integrity sha512-Lyj2g+foWKzrwW2bT/RGO982VR9vb5tlvfD88n4PwWJRrDttQbJoIdcQzN9b+NIBhI1/8iEhC5b8far9U0fQxA==
@@ -3514,12 +3514,11 @@ npm-package-arg@^9.1.0:
     semver "^7.3.5"
     validate-npm-package-name "^4.0.0"
 
-npm-packlist@6.0.1:
-  version "6.0.1"
-  resolved "https://registry.npmjs.org/npm-packlist/-/npm-packlist-6.0.1.tgz#8feb3f99bdbc0d9b95b365625a29a73f2b97f227"
-  integrity sha512-wndBwF5n0laa2pdzbc3NWsqw0+kLnaUGf08eC/UpT+nG9tv1FbEmvAyiRKMmvaMgCvaZ5ly/XP1XDRLlHoDJyQ==
+npm-packlist@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/npm-packlist/-/npm-packlist-7.0.0.tgz#d451b7d797d4b05128796d9573d69be51fdf8f31"
+  integrity sha512-8GRMzWQmFdUrRmc6tPPCd9Umm9g2qDR6X6Rik+9nYvoDQTLs/0IcCKv6iUdAmgr9sgJCm24QovwozCHWMDriOg==
   dependencies:
-    "@npmcli/arborist" "^5.0.4 || ^6.0.0 || ^6.0.0-pre.0"
     ignore-walk "^5.0.1"
 
 npm-packlist@^5.1.0:
