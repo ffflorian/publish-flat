@@ -1,4 +1,5 @@
 import {execSync} from 'child_process';
+import Arborist from '@npmcli/arborist';
 import fs from 'fs-extra';
 import logdown from 'logdown';
 import packlist from 'npm-packlist';
@@ -50,7 +51,9 @@ export class PublishFlat {
   }
 
   async build(): Promise<string | void> {
-    const files = await packlist({path: this.packageDir});
+    const arborist = new Arborist({path: this.packageDir});
+    const tree = await arborist.loadActual();
+    const files = await packlist(tree);
 
     if (!files.length) {
       this.logger.info('No files to publish');
