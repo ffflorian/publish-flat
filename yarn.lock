@@ -805,6 +805,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/ignore-walk@*":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/ignore-walk/-/ignore-walk-4.0.0.tgz#95a3e12166cbc14b691341672c142415529a4127"
+  integrity sha512-T5+1xZfSpgIz7FntMveRpKdLWZhPOidwaxVjUjGjyCXsaD2cVFr4a1+qd2HPcsM9qP0XBkg4jC9NdmuD3lZeqQ==
+  dependencies:
+    "@types/node" "*"
+
 "@types/json-schema@^7.0.7":
   version "7.0.7"
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.7.tgz#98a993516c859eb0d5c4c8f098317a9ea68db9ad"
@@ -848,10 +855,13 @@
   resolved "https://registry.npmjs.org/@types/npm-package-arg/-/npm-package-arg-6.1.1.tgz#9e2d8adc04d39824a3d9f36f738010a3f7da3c1a"
   integrity sha512-452/1Kp9IdM/oR10AyqAgZOxUt7eLbm+EMJ194L6oarMYdZNiFIFAOJ7IIr0OrZXTySgfHjJezh2oiyk2kc3ag==
 
-"@types/npm-packlist@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/@types/npm-packlist/-/npm-packlist-3.0.0.tgz#6297d00cca06002a091d1939b4d39b43d1924491"
-  integrity sha512-IdiQ2SAR2NZgAUhdpwICaL8CWKrhRg0R2awttMKewoALrBb9cYPW67IZjnkEGdhkSp6uimAFLfoCdERYJyMaAg==
+"@types/npm-packlist@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@types/npm-packlist/-/npm-packlist-7.0.0.tgz#a652570aabf5ab5e46e4a604cccbd52245d9cfb5"
+  integrity sha512-07p/B8TueEEGfU199p36KkhD7TfXgCZlT3utDpfsjVqSlwISpTBrRFHjGAb97267TrH2UEK/ve2iuwG1iHWXYQ==
+  dependencies:
+    "@types/ignore-walk" "*"
+    "@types/npmcli__arborist" "*"
 
 "@types/npm-registry-fetch@*":
   version "8.0.4"
@@ -864,7 +874,7 @@
     "@types/npmlog" "*"
     "@types/ssri" "*"
 
-"@types/npmcli__arborist@5.6.0":
+"@types/npmcli__arborist@*", "@types/npmcli__arborist@5.6.0":
   version "5.6.0"
   resolved "https://registry.npmjs.org/@types/npmcli__arborist/-/npmcli__arborist-5.6.0.tgz#c28843b01a1b75c9e313d75d39abe8c69bbc4f9a"
   integrity sha512-XBf0+ORXAicA/RxrTk6ImydaD0r5NDKjOOSgU/GVeoxMJEuR+dT3bJFhmgE+9j/odUWC/HucKHmX1tYTa+ERqQ==
