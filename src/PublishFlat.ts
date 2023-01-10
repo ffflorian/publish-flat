@@ -80,14 +80,11 @@ export class PublishFlat {
     const outputDir = this.options.outputDir ? path.resolve(this.options.outputDir) : await this.createTempDir();
 
     for (const file of normalFiles) {
-      await fs.copy(path.join(this.packageDir, file), path.join(outputDir, file), {overwrite: true, recursive: true});
+      await fs.copy(path.join(this.packageDir, file), path.join(outputDir, file));
     }
 
     for (const {fileName, replacedFilename} of filesInFlattenedDir) {
-      await fs.copy(path.join(this.packageDir, fileName), path.join(outputDir, replacedFilename), {
-        overwrite: true,
-        recursive: true,
-      });
+      await fs.copy(path.join(this.packageDir, fileName), path.join(outputDir, replacedFilename));
     }
 
     this.logger.info(`Flattened ${files.length} files in "${outputDir}".`);
